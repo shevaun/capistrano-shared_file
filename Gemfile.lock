@@ -1,13 +1,33 @@
+PATH
+  remote: .
+  specs:
+    capistrano-shared_file (0.1.1)
+      capistrano (~> 2.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
+    capistrano (2.15.4)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
     git (1.2.5)
+    highline (1.6.19)
     jeweler (1.8.3)
       bundler (~> 1.0)
       git (>= 1.2.5)
       rake
       rdoc
     json (1.7.1)
+    net-scp (1.1.1)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.6.7)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
@@ -16,6 +36,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.0.0)
-  jeweler (~> 1.8.3)
-  rdoc (~> 3.12)
+  bundler
+  capistrano-shared_file!
+  jeweler
+  rdoc

@@ -33,22 +33,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = "1.8.24"
   s.summary = "Capistrano recipe to symlink shared files e.g. config/database.yml"
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 3
-
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
-      s.add_development_dependency(%q<jeweler>, ["~> 1.8.3"])
-    else
-      s.add_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_dependency(%q<bundler>, ["~> 1.0.0"])
-      s.add_dependency(%q<jeweler>, ["~> 1.8.3"])
-    end
-  else
-    s.add_dependency(%q<rdoc>, ["~> 3.12"])
-    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
-    s.add_dependency(%q<jeweler>, ["~> 1.8.3"])
-  end
+  s.add_runtime_dependency('capistrano', "~>2.0")
+  s.add_development_dependency('bundler')
+  s.add_development_dependency('rdoc')
+  s.add_development_dependency('jeweler')
 end
-
